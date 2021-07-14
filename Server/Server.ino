@@ -47,8 +47,8 @@ void setup()
   xTaskCreatePinnedToCore(task_button, "task_button", 10000, NULL, 1, NULL, 0);
   xTaskCreatePinnedToCore(task_structure, "task_structure", 20000, NULL, 1, NULL, 0);
   xTaskCreatePinnedToCore(task_servo, "task_servo", 10000, NULL, 1, &xServo, 0);
-  //xTaskCreatePinnedToCore(task_mqtt, "task_mqtt", 10000, NULL, 1, NULL, 0);
-  //xTaskCreatePinnedToCore(task_sendmqtt, "task_sendmqtt", 10000, NULL, 1, NULL, 0);
+  xTaskCreatePinnedToCore(task_mqtt, "task_mqtt", 10000, NULL, 1, NULL, 0);
+  xTaskCreatePinnedToCore(task_sendmqtt, "task_sendmqtt", 10000, NULL, 1, NULL, 0);
 }
 
 void loop()
